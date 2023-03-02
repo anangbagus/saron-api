@@ -46,6 +46,7 @@ class Saron:
             value = get_freq_from_HPS(x,sr)
             value_freq = value
 
+        print(f"Freq = {value}")
         selisih = []
 
         for j in dataset_value:

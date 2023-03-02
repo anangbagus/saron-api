@@ -17,10 +17,6 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def cek_bilah():
 
     try:
-        # Ambil file dari request
-        # Upload file dari request ke storage server
-        # Ambil path dari upload filenya
-
         audio_file = request.files['audio']
         audio_path = os.path.join(UPLOAD_FOLDER, secure_filename(audio_file.filename))
         audio_file.save(audio_path)
