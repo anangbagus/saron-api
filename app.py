@@ -5,10 +5,8 @@ from module.models import Saron
 from werkzeug.utils import secure_filename
 import os
 
-# Define constants
 UPLOAD_FOLDER = 'upload'
 
-# Define flask app and config
 app = Flask(__name__)
 app.config["DEBUG"] = True
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER

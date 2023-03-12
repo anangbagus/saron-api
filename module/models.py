@@ -1,14 +1,10 @@
-from cmath import log
-from unittest import result
 import numpy 
 import librosa
 import glob
 import pandas as pd
-import csv
 from .helpers import get_freq_from_HPS
 
 class Saron:
-
     expected_bilah = ""
     audio_path = ""
 
@@ -33,9 +29,6 @@ class Saron:
         data_nama_value = numpy.array(data_nama)
         dataset_value = numpy.array(dataset)
 
-        # main
-
-        # databaru ini nantinya berisikan path dari android inputan user
         databaru = glob.glob(self.audio_path)
 
         hasil_freq = []
@@ -55,6 +48,5 @@ class Saron:
         
         pilihan_terbaik = selisih.index(min(selisih))
         jawaban = data_nama_value[pilihan_terbaik]
-        
 
         return str(jawaban).replace('\'', '').replace('[', '').replace(']', '')

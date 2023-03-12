@@ -1,17 +1,13 @@
 from scipy.signal.windows import blackmanharris
-from scipy import fft
 from numpy.fft import rfft
-from numpy import argmax, mean, diff, nonzero
+from numpy import argmax
 from pylab import log
 import pylab
-import numpy as np
-import matplotlib.pyplot as plt
 
 
 def get_freq_from_HPS(sig, fs):
     windowed = sig * blackmanharris(len(sig))
 
-    # harmonic product spectrum:
     ft = abs(rfft(windowed))
     maxharms = 8
     freq = []
